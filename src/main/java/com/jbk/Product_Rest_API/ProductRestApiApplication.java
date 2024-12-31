@@ -8,7 +8,7 @@ public class ProductRestApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProductRestApiApplication.class, args);
-		System.err.println("API Started....");
+		System.err.println("API Started.....");
 	}
 
 }
