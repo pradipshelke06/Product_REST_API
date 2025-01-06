@@ -15,15 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.jbk.Product_Rest_API.entity.Product;
 import com.jbk.Product_Rest_API.service.ProductService;
-
 @RestController
 @RequestMapping("/api/product")
 public class ProductController {
 
 	@Autowired
 	private ProductService productService;
+	
+	
 	@PostMapping("/addproduct")
+	
 	public String addProduct(@RequestBody Product product) {
+		
 		String msg = productService.addProduct(product);
 		return msg;
 		
@@ -31,6 +34,8 @@ public class ProductController {
 	@GetMapping("/allproducts")
 	public List<Product> viewallProducts() {
 		List<Product> viewallProducts = productService.viewallProducts();
+		int c=6/0;
+		System.out.println(c);
 		return viewallProducts;
 		
 	}
